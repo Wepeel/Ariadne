@@ -2,6 +2,7 @@
 
 workspace "Ariadne"
     architecture "x64"
+    startproject "Logging"
 
     configurations
     {
