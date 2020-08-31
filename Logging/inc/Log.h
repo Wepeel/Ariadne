@@ -1,10 +1,10 @@
 #pragma once
 
+#include <spdlog/spdlog.h>
+
 #include <memory>
 #include <string_view>
 
-#include "spdlog/spdlog.h"
-#include "spdlog/sinks/stdout_color_sinks.h"
 
 class Log
 {

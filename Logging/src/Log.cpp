@@ -1,5 +1,8 @@
 #include "Log.h"
 
+#include <spdlog/sinks/stdout_color_sinks.h>
+
+
 std::shared_ptr<spdlog::logger> Log::m_ard_logger;
 std::shared_ptr<spdlog::logger> Log::m_game_logger;
 

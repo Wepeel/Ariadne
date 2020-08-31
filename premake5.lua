@@ -31,7 +31,7 @@ outputDir = "%{cfg.buildcfg}/%{cfg.system}/%{cfg.architecture}"
         includedirs
         {
             "%{prj.name}/inc",
-            "%{prj.name}/ext/spdlog/include"
+            "%{wks.location}/ext/src/spdlog/include"
         }
 
         filter "configurations:Debug"
@@ -69,7 +69,8 @@ outputDir = "%{cfg.buildcfg}/%{cfg.system}/%{cfg.architecture}"
         includedirs
         {
             "%{prj.name}/inc",
-            "%{wks.location}/Logging/inc"
+            "%{wks.location}/Logging/inc",
+            "%{wks.location}/ext/src/spdlog/include"
         }
 
         filter "configurations:Debug"
