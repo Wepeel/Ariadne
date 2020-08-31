@@ -52,7 +52,7 @@ outputDir = "%{cfg.buildcfg}/%{cfg.system}/%{cfg.architecture}"
         language "C++"
         cppdialect "C++17"
 
-        targetdir ("%{wks.location}/" .. outputDir .. "/%{prj.name}")
+        targetdir ("%{wks.location}/target/" .. outputDir .. "/%{prj.name}")
         objdir ("%{wks.location}/intermediate/" .. outputDir .. "/%{prj.name}")
         
         files
