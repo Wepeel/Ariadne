@@ -1,8 +1,8 @@
 --	premake5.lua
 
 workspace "Ariadne"
-    architecture "x64"
-    startproject "Logging"
+    architecture "x86_64"
+    startproject "Graphics"
 
     configurations
     {
@@ -15,7 +15,7 @@ outputDir = "%{cfg.buildcfg}/%{cfg.system}/%{cfg.architecture}"
 
     project "Logging"
         location "Logging"
-        kind "ConsoleApp"
+        kind "StaticLib"
         language "C++"
         cppdialect "C++17"
 
@@ -48,7 +48,7 @@ outputDir = "%{cfg.buildcfg}/%{cfg.system}/%{cfg.architecture}"
 
     project "Graphics"
         location "Graphics"
-        kind "StaticLib"
+        kind "ConsoleApp"
         language "C++"
         cppdialect "C++17"
 
@@ -61,9 +61,15 @@ outputDir = "%{cfg.buildcfg}/%{cfg.system}/%{cfg.architecture}"
             "%{prj.name}/src/**.cpp"
         }
 
+        links
+        {
+            "Logging"
+        }
+
         includedirs
         {
-            "%{prj.name}/inc"
+            "%{prj.name}/inc",
+            "%{wks.location}/Logging/inc"
         }
 
         filter "configurations:Debug"
