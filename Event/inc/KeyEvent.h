@@ -7,13 +7,21 @@ class KeyEvent : public Event
 
 public:
 
-	int
+	KeyCode GetKeyCode() const { return m_keycode; }
+
+	SET_EVENT_CATEGORY(EventCategoryInput | EventCategoryKeyboard)
 
 
 protected:
 
-	KeyEvent(int keycode)
+	KeyEvent(KeyCode keycode)
 		:m_keycode(keycode) {}
 
 	KeyCode m_keycode;
+};
+
+
+class KeyPressedEvent : public KeyEvent
+{
+
 };
