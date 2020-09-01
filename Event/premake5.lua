@@ -1,21 +1,29 @@
-project "Logging"
+project "Event"
     kind "StaticLib"
     language "C++"
     cppdialect "C++17"
 
     targetdir ("%{wks.location}/target/" .. outputDir .. "/%{prj.name}")
     objdir ("%{wks.location}/intermediate/" .. outputDir .. "/%{prj.name}")
-        
+
     files
     {
-        "inc/**.h",
-        "src/**.cpp"
+        "inc/*.h",
+        "src/*.cpp"
+    }
+
+    links
+    {
+        "Types",
+        "Logging"
     }
 
     includedirs
     {
         "inc",
-        "ext/spdlog/include"
+        "%{wks.location}/Logging/inc",
+        "%{wks.location}/Types/inc",
+        IncDirs["spdlog"]
     }
 
     filter "configurations:Debug"

@@ -1,11 +1,11 @@
-project "Logging"
+project "Types"
     kind "StaticLib"
     language "C++"
     cppdialect "C++17"
 
     targetdir ("%{wks.location}/target/" .. outputDir .. "/%{prj.name}")
     objdir ("%{wks.location}/intermediate/" .. outputDir .. "/%{prj.name}")
-        
+
     files
     {
         "inc/**.h",
@@ -14,8 +14,7 @@ project "Logging"
 
     includedirs
     {
-        "inc",
-        "ext/spdlog/include"
+        "inc"
     }
 
     filter "configurations:Debug"

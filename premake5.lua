@@ -17,5 +17,7 @@ IncDirs = {}
 
 IncDirs["spdlog"] = "%{wks.location}/Logging/ext/spdlog/include"
 
+include "Types"
 include "Logging"
 include "Graphics"
+include "Event"
