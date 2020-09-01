@@ -13,74 +13,9 @@ workspace "Ariadne"
 
 outputDir = "%{cfg.buildcfg}/%{cfg.system}/%{cfg.architecture}"
 
-    project "Logging"
-        location "Logging"
-        kind "StaticLib"
-        language "C++"
-        cppdialect "C++17"
+IncDirs = {}
 
-        targetdir ("%{wks.location}/target/" .. outputDir .. "/%{prj.name}")
-        objdir ("%{wks.location}/intermediate/" .. outputDir .. "/%{prj.name}")
-        
-        files
-        {
-            "%{prj.name}/inc/**.h",
-            "%{prj.name}/src/**.cpp"
-        }
+IncDirs["spdlog"] = "%{wks.location}/Logging/ext/spdlog/include"
 
-        includedirs
-        {
-            "%{prj.name}/inc",
-            "%{wks.location}/ext/src/spdlog/include"
-        }
-
-        filter "configurations:Debug"
-            symbols "on"
-            runtime "Debug"
-
-        filter "configurations:Release"
-            optimize "on"
-            runtime "Release"
-
-        filter "configurations:Dist"
-            optimize "on"
-            runtime "Release"
-
-    project "Graphics"
-        location "Graphics"
-        kind "ConsoleApp"
-        language "C++"
-        cppdialect "C++17"
-
-        targetdir ("%{wks.location}/target/" .. outputDir .. "/%{prj.name}")
-        objdir ("%{wks.location}/intermediate/" .. outputDir .. "/%{prj.name}")
-        
-        files
-        {
-            "%{prj.name}/inc/**.h",
-            "%{prj.name}/src/**.cpp"
-        }
-
-        links
-        {
-            "Logging"
-        }
-
-        includedirs
-        {
-            "%{prj.name}/inc",
-            "%{wks.location}/Logging/inc",
-            "%{wks.location}/ext/src/spdlog/include"
-        }
-
-        filter "configurations:Debug"
-            symbols "on"
-            runtime "Debug"
-
-        filter "configurations:Release"
-            optimize "on"
-            runtime "Release"
-
-        filter "configurations:Dist"
-            optimize "on"
-            runtime "Release"
+include "Logging"
+include "Graphics"
