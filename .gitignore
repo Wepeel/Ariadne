@@ -1,0 +1,7 @@
+intermediate/
+
+target/
+
+*.sln
+
+*.vcxproj*
