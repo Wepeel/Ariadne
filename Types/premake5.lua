@@ -17,6 +17,9 @@ project "Types"
         "inc"
     }
 
+    pchheader "corepch.h"
+    pchsource "src/corepch.cpp"
+
     filter "configurations:Debug"
         symbols "on"
         runtime "Debug"
