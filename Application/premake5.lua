@@ -1,5 +1,5 @@
-project "Graphics"
-        kind "StaticLib"
+project "Application"
+        kind "ConsoleApp"
         language "C++"
         cppdialect "C++17"
 
@@ -14,8 +14,8 @@ project "Graphics"
 
         links
         {
-            "Logging",
-            "Types"
+            "Graphics",
+            "Event"
         }
 
         includedirs
@@ -24,9 +24,6 @@ project "Graphics"
             "%{wks.location}/Logging/inc",
             IncDirs["spdlog"]
         }
-
-        pchheader "graphicspch.h"
-        pchsource "src/graphicspch.cpp"
 
         filter "configurations:Debug"
             symbols "on"

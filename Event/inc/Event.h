@@ -32,6 +32,8 @@ class Event
 
 public:
 
+	virtual ~Event() = default;
+
 	virtual int GetCategoryFlags() const = 0;
 	virtual EventType GetEventType() const = 0;
 

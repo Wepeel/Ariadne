@@ -2,7 +2,7 @@
 
 workspace "Ariadne"
     architecture "x86_64"
-    startproject "Graphics"
+    startproject "Application"
 
     configurations
     {
@@ -22,3 +22,4 @@ include "Types"
 include "Logging"
 include "Graphics"
 include "Event"
+include "Application"
