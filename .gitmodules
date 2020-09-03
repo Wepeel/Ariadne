@@ -1,6 +1,6 @@
-[submodule "Logging/ext/spdlog"]
-	path = Logging/ext/spdlog
-	url = https://github.com/gabime/spdlog
 [submodule "ext/src/GLFW"]
 	path = ext/src/GLFW
 	url = git@github.com:Wepeel/glfw.git
+[submodule "Logging/ext/spdlog"]
+	path = Logging/ext/spdlog
+	url = https://github.com/gabime/spdlog
