@@ -14,21 +14,13 @@ public:
 
 	static void Init();
 
-	static void trace(std::string_view log_message);
-
-	static void debug(std::string_view log_message);
-
-	static void info(std::string_view log_message);
-
-	static void warn(std::string_view log_message);
-
-	static void error(std::string_view log_message);
-
-	static void critical(std::string_view log_message);
-
 	static void level_trace();
 
 	static void level_untrace();
+
+	static std::shared_ptr<spdlog::logger> get_core_logger() { return m_ard_logger; };
+
+	static std::shared_ptr<spdlog::logger> get_game_logger() { return m_game_logger; };
 
 
 private:
@@ -45,14 +37,14 @@ private:
 #define ARD_LOG_TRACE_INVISIBLE() Log::level_untrace()
 
 
-#define ARD_LOG_TRACE(...) Log::trace(__VA_ARGS__)
+#define ARD_LOG_TRACE(...) Log::get_core_logger()->trace(__VA_ARGS__)
 
-#define ARD_LOG_DEBUG(...) Log::debug(__VA_ARGS__)
+#define ARD_LOG_DEBUG(...) Log::get_core_logger()->debug(__VA_ARGS__)
 
-#define ARD_LOG_INFO(...) Log::info(__VA_ARGS__)
+#define ARD_LOG_INFO(...) Log::get_core_logger()->info(__VA_ARGS__)
 
-#define ARD_LOG_WARN(...) Log::warn(__VA_ARGS__)
+#define ARD_LOG_WARN(...) Log::get_core_logger()->warn(__VA_ARGS__)
 
-#define ARD_LOG_ERROR(...) Log::error(__VA_ARGS__)
+#define ARD_LOG_ERROR(...) Log::get_core_logger()->error(__VA_ARGS__)
 
-#define ARD_LOG_CRITICAL(...) Log::critical(__VA_ARGS__)
+#define ARD_LOG_CRITICAL(...) Log::get_core_logger()->critical(__VA_ARGS__)

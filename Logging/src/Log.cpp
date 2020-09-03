@@ -17,36 +17,6 @@ void Log::Init()
 	spdlog::set_level(spdlog::level::debug);
 }
 
-void Log::trace(std::string_view log_message)
-{
-	m_ard_logger->trace(log_message);
-}
-
-void Log::debug(std::string_view log_message)
-{
-	m_ard_logger->debug(log_message);
-}
-
-void Log::info(std::string_view log_message)
-{
-	m_ard_logger->info(log_message);
-}
-
-void Log::warn(std::string_view log_message)
-{
-	m_ard_logger->warn(log_message);
-}
-
-void Log::error(std::string_view log_message)
-{
-	m_ard_logger->error(log_message);
-}
-
-void Log::critical(std::string_view log_message)
-{
-	m_ard_logger->critical(log_message);
-}
-
 void Log::level_trace()
 {
 	m_ard_logger->set_level(spdlog::level::trace);

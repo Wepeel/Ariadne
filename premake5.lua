@@ -16,6 +16,12 @@ outputDir = "%{cfg.buildcfg}/%{cfg.system}/%{cfg.architecture}"
 IncDirs = {}
 
 IncDirs["spdlog"] = "%{wks.location}/Logging/ext/spdlog/include"
+IncDirs["GLFW"] = "%{wks.location}/ext/src/GLFW/include"
+
+
+group "External"
+    include "ext/src/GLFW"
+group ""
 
 
 include "Types"

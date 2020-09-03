@@ -15,14 +15,18 @@ project "Graphics"
         links
         {
             "Logging",
-            "Types"
+            "Types",
+            "Event",
+            "GLFW"
         }
 
         includedirs
         {
             "inc",
             "%{wks.location}/Logging/inc",
-            IncDirs["spdlog"]
+            "%{wks.location}/Event/inc",
+            IncDirs["spdlog"],
+            IncDirs["GLFW"]
         }
 
         pchheader "graphicspch.h"
