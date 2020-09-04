@@ -1,10 +1,9 @@
-#include "Log.h"
+#include "apppch.h"
+#include "Application.h"
 
 int main()
 {
-	ARD_LOG_INIT();
-
-	ARD_LOG_CRITICAL("Hello World");
+	Application app;
 
 
 	return 0;

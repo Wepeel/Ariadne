@@ -15,15 +15,21 @@ project "Application"
         links
         {
             "Graphics",
-            "Event"
+            "Event",
         }
 
         includedirs
         {
             "inc",
             "%{wks.location}/Logging/inc",
-            IncDirs["spdlog"]
+            "%{wks.location}/Graphics/inc",
+            "%{wks.location}/Event/inc",
+            IncDirs["spdlog"],
+            IncDirs["GLFW"]
         }
+
+        pchheader "apppch.h"
+        pchsource "src/apppch.cpp"
 
         filter "configurations:Debug"
             symbols "on"
