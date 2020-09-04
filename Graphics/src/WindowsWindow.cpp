@@ -39,6 +39,8 @@ namespace Windowing
 		++s_GLFW_window_count;
 
 		glfwMakeContextCurrent(m_window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		//TODO: Assertion
 
 		glfwSetWindowUserPointer(m_window, &m_data);
 		set_vsync(true);

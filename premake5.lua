@@ -17,10 +17,12 @@ IncDirs = {}
 
 IncDirs["spdlog"] = "%{wks.location}/Logging/ext/spdlog/include"
 IncDirs["GLFW"] = "%{wks.location}/ext/src/GLFW/include"
+IncDirs["glad"] = "%{wks.location}/ext/src/glad/include"
 
 
 group "External"
     include "ext/src/GLFW"
+    include "ext/src/glad"
 group ""
 
 

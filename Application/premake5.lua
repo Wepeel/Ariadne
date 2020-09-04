@@ -25,7 +25,8 @@ project "Application"
             "%{wks.location}/Graphics/inc",
             "%{wks.location}/Event/inc",
             IncDirs["spdlog"],
-            IncDirs["GLFW"]
+            IncDirs["GLFW"],
+            IncDirs["glad"]
         }
 
         pchheader "apppch.h"

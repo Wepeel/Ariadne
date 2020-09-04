@@ -17,7 +17,8 @@ project "Graphics"
             "Logging",
             "Types",
             "Event",
-            "GLFW"
+            "GLFW",
+            "glad"
         }
 
         includedirs
@@ -26,7 +27,8 @@ project "Graphics"
             "%{wks.location}/Logging/inc",
             "%{wks.location}/Event/inc",
             IncDirs["spdlog"],
-            IncDirs["GLFW"]
+            IncDirs["GLFW"],
+            IncDirs["glad"]
         }
 
         pchheader "graphicspch.h"
