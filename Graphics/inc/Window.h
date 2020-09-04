@@ -10,6 +10,13 @@ namespace Windowing
 		std::string Title;
 		std::uint32_t Width;
 		std::uint32_t Height;
+
+		WindowProperties(const std::string& title = "Ariadne",
+			uint32_t width = 1280,
+			uint32_t height = 720)
+			: Title(title), Width(width), Height(height)
+		{
+		}
 	};
 
 	class Window

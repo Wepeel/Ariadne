@@ -72,6 +72,16 @@ namespace Windowing
 
 	void WindowsWindow::set_vsync(bool enable)
 	{
+		if (enable)
+		{
+			glfwSwapInterval(1);
+		}
+
+		else
+		{
+			glfwSwapInterval(0);
+		}
+
 		m_data.VSync = enable;
 	}
 
