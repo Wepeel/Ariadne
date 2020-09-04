@@ -1,5 +1,8 @@
 #pragma once
 
+#include <string>
+#include <sstream>
+
 // The MASK macro just sets up mask bits that we will check our events against
 #define MASK(x) 1 << x
 

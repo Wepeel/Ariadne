@@ -13,6 +13,8 @@ public:
 
 	void run();
 
+	void on_event(Event& e);
+
 private:
 
 	std::unique_ptr<Windowing::Window> m_window = nullptr;
