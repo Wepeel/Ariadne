@@ -15,6 +15,8 @@ public:
 
 	void on_event(Event& e);
 
+	bool on_window_close(WindowCloseEvent wce);
+
 private:
 
 	std::unique_ptr<Windowing::Window> m_window = nullptr;

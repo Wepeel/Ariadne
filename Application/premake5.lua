@@ -24,6 +24,7 @@ project "Application"
             "%{wks.location}/Logging/inc",
             "%{wks.location}/Graphics/inc",
             "%{wks.location}/Event/inc",
+            "%{wks.location}/Types/inc",
             IncDirs["spdlog"],
             IncDirs["GLFW"],
             IncDirs["glad"]

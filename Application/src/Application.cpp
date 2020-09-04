@@ -29,5 +29,13 @@ void Application::run()
 
 void Application::on_event(Event& e)
 {
-	ARD_LOG_INFO("{0}", e.GetEventType());
+	EventDispatcher disp(e);
+
+	disp.Dispatch<WindowCloseEvent>(std::bind(&Application::on_window_close, this, std::placeholders::_1));
+}
+
+bool Application::on_window_close(WindowCloseEvent wce)
+{
+	m_running = false;
+	return true;
 }
