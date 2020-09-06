@@ -25,6 +25,8 @@ void Application::run()
 		glClear(GL_COLOR_BUFFER_BIT);
 		m_window->on_update();
 	}
+
+	ARD_LOG_INFO("Ended run");
 }
 
 void Application::on_event(Event& e)

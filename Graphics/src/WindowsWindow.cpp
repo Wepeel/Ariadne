@@ -62,6 +62,8 @@ namespace Windowing
 				WindowsData& data = *(WindowsData*)glfwGetWindowUserPointer(window);
 				WindowCloseEvent event;
 				data.EventCallback(event);
+
+				ARD_LOG_INFO("Closing window");
 			});
 
 		glfwSetKeyCallback(m_window, [](GLFWwindow* window, int key, int scancode, int action, int mods)
