@@ -6,3 +6,5 @@
 #include <GLFW/glfw3.h>
 
 #include "Log.h"
+#include "LayerStack.h"
+#include "Window.h"
