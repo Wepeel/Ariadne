@@ -26,6 +26,9 @@ project "Event"
         IncDirs["spdlog"]
     }
 
+    pchheader "eventpch.h"
+    pchsource "src/eventpch.cpp"
+
     filter "configurations:Debug"
         symbols "on"
         runtime "Debug"

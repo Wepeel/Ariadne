@@ -45,7 +45,7 @@ public:
 		return GetCategoryFlags() & category;
 	}
 
-	bool m_handled;
+	bool m_handled = false;
 };
 
 class EventDispatcher
