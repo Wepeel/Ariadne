@@ -14,6 +14,7 @@ project "Application"
 
         links
         {
+            "FileSystem",
             "Graphics",
             "Event",
         }
@@ -22,6 +23,7 @@ project "Application"
         {
             "inc",
             "%{wks.location}/Logging/inc",
+            "%{wks.location}/FileSystem/inc",
             "%{wks.location}/Graphics/inc",
             "%{wks.location}/Event/inc",
             "%{wks.location}/Types/inc",
