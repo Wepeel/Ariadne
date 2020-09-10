@@ -26,6 +26,7 @@ group "External"
 group ""
 
 
+include "Testing"
 include "Types"
 include "Logging"
 include "Graphics"
