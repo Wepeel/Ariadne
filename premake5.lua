@@ -28,6 +28,7 @@ group ""
 
 include "Testing"
 include "Types"
+include "FileSystem"
 include "Logging"
 include "Graphics"
 include "Event"
