@@ -9,18 +9,12 @@
 
 #define ARD_ASSERT_STATIC_EQ(value, expected) static_assert(value == expected, "Fail")
 
+#define ARD_ASSERT_STATIC_COND_MSG(expression, message) static_assert(expression, message)
+
+#define ARD_ASSERT_STATIC_COND(expression) static_assert(expression, "Fail")
+
+
 
 #define ARD_ASSERT_RT_EQ(value, expected) if (value != expected) DEBUG_BREAK
 
-
-namespace assertion
-{
-	template<typename T>
-	static void assert_eq(T value, T expected)
-	{
-		if (value != expected)
-		{
-			DEBUG_BREAK;
-		}
-	}
-}
+#define ARD_ASSERT_RT_COND(expression) if (!expression) DEBUG_BREAK
