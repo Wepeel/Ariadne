@@ -17,8 +17,8 @@ project "Testing"
             "inc",
         }
 
-        --pchheader "testingpch.h"
-       -- pchsource "src/testingpch.cpp"
+        pchheader "testpch.h"
+        pchsource "src/testpch.cpp"
 
         filter "configurations:Debug"
             symbols "on"
