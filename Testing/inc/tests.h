@@ -10,11 +10,11 @@
 #define ARD_TEST_EXPECT_EQ(value, expected) if (value == expected)\
 											{\
 												++tests_passed;\
-												printf("Test number %d succeeded.\n", tests_tested + 1);\
+												printf("Test number %d succeeded\n", tests_tested + 1);\
 											}\
 											else\
 											{\
-												printf("Test number %d failed\n", tests_tested + 1);\
+												printf("------Test number %d failed----------\n", tests_tested + 1);\
 											}\
 											++tests_tested;
 
