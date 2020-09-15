@@ -26,6 +26,8 @@ group "External"
 group ""
 
 group "Core Systems"
+    include "Startup Shutdown"
+    include "Memory Allocation"
     include "Testing"
     include "Types"
     include "Logging"
