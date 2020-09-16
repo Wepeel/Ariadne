@@ -17,6 +17,9 @@ project "Profiling"
             "inc"
         }
 
+        pchheader "profilingpch.h"
+        pchsource "src/profilingpch.cpp"
+
         filter "configurations:Debug"
             symbols "on"
             runtime "Debug"
