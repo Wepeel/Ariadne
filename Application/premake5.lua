@@ -14,6 +14,8 @@ project "Application"
 
         links
         {
+            "Profiling",
+            "Testing",
             "FileSystem",
             "Graphics",
             "Event",
@@ -22,6 +24,8 @@ project "Application"
         includedirs
         {
             "inc",
+            "%{wks.location}/Testing/inc",
+            "%{wks.location}/Profiling/inc",
             "%{wks.location}/Logging/inc",
             "%{wks.location}/FileSystem/inc",
             "%{wks.location}/Graphics/inc",

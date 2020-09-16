@@ -1,4 +1,4 @@
-project "FileSystem"
+project "Testing"
         kind "StaticLib"
         language "C++"
         cppdialect "C++17"
@@ -17,8 +17,8 @@ project "FileSystem"
             "inc",
         }
 
-        --pchheader "filesys.h"
-        --pchsource "src/filesys.cpp"
+        pchheader "testpch.h"
+        pchsource "src/testpch.cpp"
 
         filter "configurations:Debug"
             symbols "on"

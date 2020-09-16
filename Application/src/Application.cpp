@@ -3,6 +3,8 @@
 
 Application::Application()
 {
+	ARD_PROFILE_FUNCTION();
+
 	ARD_LOG_INIT();
 
 	m_window = std::unique_ptr<Windowing::Window>(Windowing::Window::Create());

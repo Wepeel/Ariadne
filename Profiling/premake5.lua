@@ -1,4 +1,4 @@
-project "FileSystem"
+project "Profiling"
         kind "StaticLib"
         language "C++"
         cppdialect "C++17"
@@ -14,11 +14,11 @@ project "FileSystem"
 
         includedirs
         {
-            "inc",
+            "inc"
         }
 
-        --pchheader "filesys.h"
-        --pchsource "src/filesys.cpp"
+        pchheader "profilingpch.h"
+        pchsource "src/profilingpch.cpp"
 
         filter "configurations:Debug"
             symbols "on"
