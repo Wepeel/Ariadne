@@ -14,6 +14,7 @@ project "Application"
 
         links
         {
+            "Profiling",
             "Testing",
             "FileSystem",
             "Graphics",
@@ -24,6 +25,7 @@ project "Application"
         {
             "inc",
             "%{wks.location}/Testing/inc",
+            "%{wks.location}/Profiling/inc",
             "%{wks.location}/Logging/inc",
             "%{wks.location}/FileSystem/inc",
             "%{wks.location}/Graphics/inc",

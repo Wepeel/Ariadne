@@ -3,5 +3,5 @@
 
 void time_logger::log_time(const char* name, double value)
 {
-	std::printf("%s: %f microseconds", name, value);
+	std::printf("%s: %f milliseconds\n", name, value);
 }

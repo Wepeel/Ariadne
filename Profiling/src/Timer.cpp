@@ -2,8 +2,11 @@
 #include "Timer.h"
 #include "TimeLogger.h"
 
+timer::timer()
+	:m_beginning(clock::now()), m_name("") {}
+
 timer::timer(const char* name)
-	:m_beginning(clock::now()), m_name(name)
+	: m_beginning(clock::now()), m_name(name)
 {}
 
 timer::~timer()

@@ -20,9 +20,9 @@
 
 #define ARD_TEST_BREAKDOWN() if (0 == tests_tested)\
 								{\
-									printf("No tests were run");\
+									printf("No tests were run\n");\
 								}\
 								else\
 								{\
-									printf("%d tests out of %d succeeded. Test rate: %.2f", tests_passed, tests_tested, (float)tests_passed / tests_tested);\
+									printf("%d tests out of %d succeeded. Test rate: %.2f\n", tests_passed, tests_tested, (float)tests_passed / tests_tested);\
 								}\

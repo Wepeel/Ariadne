@@ -2,11 +2,15 @@
 
 #include "profilingpch.h"
 
+
 class timer
 {
+
 public:
 
-	timer(const char* name = "");
+	timer();
+
+	timer(const char* name);
 
 	~timer();
 
@@ -20,9 +24,9 @@ public:
 private:
 
 	using clock = std::chrono::high_resolution_clock;
-	using measuring_duration = std::chrono::microseconds;
+	using measuring_duration = std::chrono::milliseconds;
 
 	std::chrono::time_point<clock> m_beginning;
 
-	const char* m_name = "";
+	const char* m_name;
 };

@@ -9,3 +9,5 @@
 #include "Log.h"
 #include "LayerStack.h"
 #include "Window.h"
+
+#include "Macros.h"
